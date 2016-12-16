@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChordController">
+   <children>
+      <ChoiceBox fx:id="rootBox" layoutX="14.0" layoutY="14.0" prefWidth="150.0" />
+      <RadioButton fx:id="majButton" layoutX="183.0" layoutY="18.0" mnemonicParsing="false" onAction="#majListener" selected="true" text="Major ">
+         <toggleGroup>
+            <ToggleGroup fx:id="chordType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="minButton" layoutX="239.0" layoutY="18.0" mnemonicParsing="false" onAction="#minListener" text="Minor" toggleGroup="$chordType" />
+      <RadioButton fx:id="dom7Button" layoutX="300.0" layoutY="18.0" mnemonicParsing="false" onAction="#dom7Listener" text="Dominant 7th" toggleGroup="$chordType" />
+      <RadioButton fx:id="maj7Button" layoutX="404.0" layoutY="18.0" mnemonicParsing="false" onAction="#maj7Listener" text="Major 7th" toggleGroup="$chordType" />
+      <RadioButton fx:id="min7Button" layoutX="484.0" layoutY="18.0" mnemonicParsing="false" onAction="#min7Listener" text="Minor 7th" toggleGroup="$chordType" />
+      <RadioButton fx:id="augButton" layoutX="183.0" layoutY="39.0" mnemonicParsing="false" onAction="#augListener" text="Augmented" toggleGroup="$chordType" />
+      <RadioButton fx:id="dimButton" layoutX="273.0" layoutY="39.0" mnemonicParsing="false" onAction="#dimListener" text="Diminished" toggleGroup="$chordType" />
+      <Label fx:id="chordNameLabel" layoutX="14.0" layoutY="183.0" />
+      <Label layoutX="14.0" layoutY="200.0" text="Notes in chord: " />
+      <Label fx:id="notesLabel" layoutX="99.0" layoutY="200.0" />
+   </children>
+</AnchorPane>
